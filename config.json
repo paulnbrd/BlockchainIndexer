@@ -1,0 +1,16 @@
+{
+    "__comment": "Command: mongod --auth --port 27017 --dbpath /data/db (C:\\Program Files\\MongoDB\\Server\\5.0\\bin)",
+    "mongodb":
+    {
+        "host": "127.0.0.1",
+        "port": 27017,
+        "username": "blockchainindexer",
+        "password": "password",
+        "database": "blockchain",
+        "authSource": "admin"
+    },
+    "network":
+    {
+        "ws": "wss://api.avax.network/ext/bc/C/ws"
+    }
+}
