@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { Block, Transaction } = require('./schemas.js');
+const { Block, Transaction, Contract } = require('./schemas.js');
 
 const infos = global.config.mongodb;
 const connectionURI = "mongodb://"+infos.username+":"+infos.password+"@"+infos.host+":"+infos.port+"/"+global.config.mongodb.database+"?authSource="+infos.authSource+"&directConnection=true";
@@ -8,7 +8,8 @@ let IS_CONNECTED = false;
 
 const collections = [
     "blocks",
-    "transactions"
+    "transactions",
+    "contracts"
 ];
 COLLECTIONS = {
     BLOCKS: "blocks",

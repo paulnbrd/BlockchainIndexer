@@ -50,7 +50,21 @@ const transactionSchema = new Schema({
 });
 const Transaction = mongoose.model("Transaction", transactionSchema);
 
+const contractSchema = new Schema({
+    address: String,
+    name: String | null,
+    symbol: String | null,
+    creator: String | null,
+    totalSupply: Number | null,
+    type: [String],
+    bytecode: String,
+
+    versionTimestamp: Number
+}, { collection: "contracts" });
+const Contract = mongoose.model("Contract", contractSchema);
+
 module.exports = {
     Block: Block,
-    Transaction: Transaction
+    Transaction: Transaction,
+    Contract: Contract
 };

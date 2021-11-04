@@ -9,6 +9,15 @@ const argv = yargs.option("config", {
 }).help().argv;
 global.config = require("./"+argv.config);
 global.config = require("./config.json");
+if(global.config.network === undefined) {
+    global.config.network = {};
+}
+if(global.config.network.settings === undefined) {
+    global.config.network.settings = {};
+}
+if(global.config.network.settings.transactionNotConfirmedRetryWait === undefined) {
+    global.config.network.settings.transactionNotConfirmedRetryWait = 10000;
+}
 if(global.config.mongodb.authSource == undefined)
 {
     global.config.mongodb.authSource = "admin";

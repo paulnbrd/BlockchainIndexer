@@ -11,6 +11,10 @@
     },
     "network":
     {
-        "ws": "wss://api.avax.network/ext/bc/C/ws"
+        "ws": "wss://api.avax.network/ext/bc/C/ws",
+
+        "settings": {
+            "transactionNotConfirmedRetryWait": 10000
+        }
     }
 }
